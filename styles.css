@@ -1,0 +1,82 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #fafafa; /* --color-bg */
+  color: #3e4e5e;
+  margin: 0;
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: #fff;
+  border-radius: 5px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 8px rgba(125, 169, 200, 0.15); /* --shadow-light */
+  transition: box-shadow 0.3s;
+}
+
+h1, h2, h3 {
+  color: #7da9c8; /* --color-primary */
+  margin-bottom: 16px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+#navbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+#auth-control, #login-form, #register-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex-grow: 1;
+  min-width: 120px;
+  font-size: 15px;
+  padding: 8px 12px;
+  border: 1.5px solid #d9e2ec; /* --color-border */
+  border-radius: 5px;
+  color: #3e4e5e;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #7da9c8; /* --color-primary */
+  outline: none;
+  box-shadow: 0 0 8px #a5c1db; /* --color-primary-hover */
+}
+
+button {
+  background: #7da9c8;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 8px 22px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(125, 169, 200, 0.15);
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #a5c1db;
+  box-shadow: 0 6px 12px rgba(165, 193, 219, 0.3);
+}
+
+button.active {
+  background: #a5c1db;
+  box-shadow: 0 6px 12px rgba(165, 193, 219, 0.3);
+}
