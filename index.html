@@ -8,8 +8,13 @@
 </head>
 <body>
 	<div class="container">
-		<section id="navbar">
-			<h1>Финансовый помощник</h1>
+		<section id="navbar" class="auth-mode">
+			<h1 id="navbar-title">Финансовый помощник</h1>
+			<div id="navbar-user" style="display: none;">
+				<span id="navbar-username"></span>
+				<button onclick="openSettings()">настройки</button>
+				<button onclick="logout()">выйти</button>
+			</div>
 		</section>
 
 		<section id="auth-screen">
@@ -34,7 +39,7 @@
 			<p id="auth-message"></p>
 		</section>
 
-		<section id="main-screen">
+		<section id="main-screen" style="display: none;">
 			<h2>Главная страница</h2>
 			<p>Добро пожаловать, <span id="display-username"></span>!</p>
 		</section>

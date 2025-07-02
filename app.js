@@ -15,6 +15,10 @@ function showAuthScreen() {
 	console.log ('----- showAuthScreen -----');
 	document.getElementById('auth-screen').style.display = 'block';
 	document.getElementById('main-screen').style.display = 'none';
+
+	document.getElementById('navbar-user').style.display = 'none';
+	document.getElementById('navbar').classList.add('auth-mode');
+
 	showLoginForm();
 }
 
@@ -24,7 +28,12 @@ function showMainScreen(login) {
 	const user = users.find(u => u.login === login);
 	document.getElementById('auth-screen').style.display = 'none';
 	document.getElementById('main-screen').style.display = 'block';
+
 	document.getElementById('display-username').textContent = user.name || login;
+
+	document.getElementById('navbar-user').style.display = 'flex';
+	document.getElementById('navbar-username').textContent = user.name || login;
+	document.getElementById('navbar').classList.remove('auth-mode');
 }
 
 function showLoginForm() {
@@ -91,7 +100,7 @@ function register() {
 
 	let users = JSON.parse(localStorage.getItem('users') || '[]');
 
-	if (users.find(u => u.login === login && u.is_deleted === 0)) {
+	if (users.find(u => u.login === login)) {
 		return showMessage('Пользователь с таким логином уже существует');
 	}
 
@@ -108,4 +117,15 @@ function register() {
 	document.getElementById('register-password').value = '';
 	document.getElementById('register-name').value = '';
 	showMessage('Регистрация завершена успешно');
+}
+
+function logout() {
+	console.log('----- logout -----');
+	sessionStorage.removeItem('currentUser');
+	showAuthScreen();
+}
+
+function openSettings() {
+	console.log('----- openSettings -----');
+	alert('Настройки пользователя в разработке.');
 }

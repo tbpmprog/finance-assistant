@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-  max-width: 700px;
+  max-width: 1024px;
   margin: auto;
   background: #fff;
   border-radius: 5px;
@@ -24,22 +24,6 @@ h1, h2, h3 {
 
 section {
   margin-bottom: 30px;
-}
-
-#navbar {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 20px;
-}
-
-#auth-control, #login-form, #register-form {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 20px;
 }
 
 input {
@@ -79,4 +63,40 @@ button:hover {
 button.active {
   background: #a5c1db;
   box-shadow: 0 6px 12px rgba(165, 193, 219, 0.3);
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+#navbar.auth-mode {
+  justify-content: center;
+}
+
+#navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#navbar-user button {
+  padding: 8px 8px;
+  font-size: 15px;
+}
+
+#navbar-username {
+  font-weight: bold;
+}
+
+#auth-control, #login-form, #register-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
 }
