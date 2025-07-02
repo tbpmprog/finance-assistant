@@ -12,28 +12,28 @@
 			<h1 id="navbar-title">Финансовый помощник</h1>
 			<div id="navbar-user" style="display: none;">
 				<span id="navbar-username"></span>
-				<button onclick="openSettings()">настройки</button>
-				<button onclick="logout()">выйти</button>
+				<button id="user_settings-btn">настройки</button>
+				<button id="user_logout-btn">выйти</button>
 			</div>
 		</section>
 
 		<section id="auth-screen">
 			<div id="auth-control">
-				<button id="btn-login" onclick="showLoginForm()">Вход</button>
-				<button id="btn-register" onclick="showRegisterForm()">Регистрация</button>
+				<button id="auth-login-btn">Вход</button>
+				<button id="auth-register-btn">Регистрация</button>
 			</div>
 
 			<div id="login-form">
 				<input type="text" id="login-username" placeholder="Логин">
 				<input type="password" id="login-password" placeholder="Пароль">
-				<button onclick="login()">Войти</button>
+				<button id="login-btn">Войти</button>
 			</div>
 
 			<div id="register-form" style="display: none;">
 				<input type="text" id="register-username" placeholder="Логин">
 				<input type="password" id="register-password" placeholder="Пароль">
 				<input type="text" id="register-name" placeholder="Имя">
-				<button onclick="register()">Зарегистрироваться</button>
+				<button id="register-btn">Зарегистрироваться</button>
 			</div>
 
 			<p id="auth-message"></p>
@@ -45,6 +45,6 @@
 		</section>
 	</div>
 
-	<script src="app.js"></script>
+	<script type="module" src="app.js"></script>
 </body>
 </html>
