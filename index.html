@@ -19,32 +19,44 @@
 
 		<section id="auth-screen">
 			<div id="auth-control">
-				<button id="auth-login-btn">Вход</button>
-				<button id="auth-register-btn">Регистрация</button>
+				<button id="auth-login-btn" type="button">Вход</button>
+				<button id="auth-register-btn" type="button">Регистрация</button>
 			</div>
 
-			<div id="login-form">
-				<input type="text" id="login-username" placeholder="Логин">
-				<input type="password" id="login-password" placeholder="Пароль">
-				<button id="login-btn">Войти</button>
-			</div>
+			<form id="login-form" class="auth-form">
+				<label for="login-username" class="visually-hidden">Логин:</label>
+				<input type="text" id="login-username" name="login" placeholder="Логин" required>
+				
+				<label for="login-password" class="visually-hidden">Пароль:</label>
+				<input type="password" id="login-password" name="password" placeholder="Пароль" required>
+				
+				<label id="stay-label">
+					<input type="checkbox" id="stay-logged"> Оставаться в системе
+				</label>
+				
+				<button id="login-btn" type="submit">Войти</button>
+			</form>
 
-			<div id="register-form" style="display: none;">
-				<input type="text" id="register-username" placeholder="Логин">
-				<input type="password" id="register-password" placeholder="Пароль">
-				<input type="text" id="register-name" placeholder="Имя">
-				<button id="register-btn">Зарегистрироваться</button>
-			</div>
+			<form id="register-form" class="auth-form" style="display: none;">
+				<label for="register-username" class="visually-hidden">Логин:</label>
+				<input type="text" id="register-username" name="login" placeholder="Логин" required>
+				
+				<label for="register-password" class="visually-hidden">Пароль:</label>
+				<input type="password" id="register-password" name="password" placeholder="Пароль" required>
+				
+				<label for="register-name" class="visually-hidden">Имя:</label>
+				<input type="text" id="register-name" name="name" placeholder="Имя" required>
+				
+				<button id="register-btn" type="submit">Зарегистрироваться</button>
+			</form>
 
 			<p id="auth-message"></p>
 		</section>
 
 		<section id="main-screen" style="display: none;">
-			<h2>Главная страница</h2>
-			<p>Добро пожаловать, <span id="display-username"></span>!</p>
+			<p id="main-title"></p>
 		</section>
 	</div>
-
 	<script type="module" src="app.js"></script>
 </body>
 </html>
